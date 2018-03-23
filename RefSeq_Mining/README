@@ -1,0 +1,44 @@
+=================
+== Description ==
+=================
+
+RefSeq_get.pl uses a list of target genes and a list of RefSeq fasta files to pull out and get the coding sequences of target genes online. 
+
+There are 2 files to modify:
+
+1. genes_to_get
+
+This file contains a list of the genes eg:
+
+MTMR1
+GPC1
+HAGH
+RNF4
+
+Where the genes of interest are present in the fasta header of the target RefSeq file 
+
+for example, in humans the first gene "MTMR1" will match the following header:">NM_001040446.2 Homo sapiens myotubularin related protein 12 (MTMR12), transcript variant 1, mRNA" 
+
+Gene name matching is not case senstive and should find both MTMR1 and Mtmr1 (as is the nomenclature in rodents, for example)
+
+
+2. genomespec
+
+This file contains the name of the species  followed by ":" followed by the location of the RefSeq fasta file eg:
+
+Homo sapiens:GCF_000001405.32_GRCh38.p6_rna.fna
+
+The script RefSeq_get.pl will loop through all the genes in "genes_to_get" and attempt to find them for all genomes listed in "genomespec". It then uses NCBI's eutils to find the entry for the gene's GI number, and will gather and mined the CDS regions, using 3 attempts should eutils fail. Note there is a 4 second delay between each attemp, as is the minimum recommneded for using eutils. 
+
+
+=================
+===== Usage =====
+=================
+
+RefSeq_get.pl will be executed with the following command:
+
+perl RefSeq_get.pl [name_for_output_directory]
+
+eg "perl RefSeq_get.pl Analysis1"
+
+It is best to place RefSeq_get.pl into a directory along with 'genomespec' and 'genes_to_get', and place all the RefSeq ".fna" files into the same directory. These ".fna" files typically average at ~150-200MB in size for mammalian genomes. 
