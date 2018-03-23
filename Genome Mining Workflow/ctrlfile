@@ -1,0 +1,16 @@
+Overhang:"0";
+ShearLength:"4000";
+Maker_Path:"";
+Blastn_Path:"";
+Makeblastdb_Path:"";
+Target_genes:"target_genes";
+Matcher_Path:"";
+Framebot_Path:"";
+GenomeFile:"GCF_000001405.35_GRCh38.p9_genomic.fna";
+SisterTaxa:"Homo_sapiens_longest_transcript.fa";
+TestName:"HumanvHumanTest";
+OverlapDiff:"20";
+Evalue:"1e-5";
+Score:"40";
+Ref_Coverage:"70";
+Augustus_model:"human";
