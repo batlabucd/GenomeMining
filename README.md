@@ -22,7 +22,24 @@ Framebot: https://github.com/rdpstaff/
 
 Note that MAKER contains binaries for AUGUSTUS and SNAP as part of its installation. MAKER also contains BLAST binaries, and therefore contains almost all external software required. Only the matcher binary is required from EMBOSS.
 
+==MAKER Instillation==
+MAKER can be found at the above address. This pipeline has been written using version 2.31-8. 
+Once MAKER has been unpacked, go to the /maker/src/ directory. In here,type 'perl Buil.PL'. This will install a number of dependancies for maker to run (you can choose No for installing MPI, this will not affect maker. From here, you can install all depednables by typing:
+'./Build installdeps' and './Build install exes'. You can see thet build status by typing './Build status'. This will tell you what files are needed for maker to run.
 
+Using './Build', you can make the binaries for SNAP, augustus and exonerate with './Build snap', './Build augustus' and './Build exonerate'. The download locations for these binaries can be found in the ;downlaods' file in the src directory in /maker/. 
+
+==EMBOSS Instillation==
+To install emboss once downloaded, type the following commands:
+'./configure --prefix=/usr/local/emboss --without-x'
+'make'
+'sudo make install'
+
+==FrameBot Instillation==
+Once 'Framebot-master.zip' has been downlaoded and unzipped, you may have to install 'ant' via the command 'sudo apt install ant'
+When you have ant installed, you can use 'ant jar' to install. Alternatively, you can download pre-compiled versions in our github directory and move them into the maker/bin/ directory
+
+   
 ----------------------
 Installation/File list
 ----------------------
