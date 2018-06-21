@@ -28,7 +28,7 @@ MAKER can be found at the above address. This pipeline has been written using ve
 Once MAKER has been unpacked, go to the /maker/src/ directory. In here,type 'perl Buil.PL'. This will install a number of dependancies for maker to run (you can choose No for installing MPI, this will not affect maker. From here, you can install all depednables by typing:
 './Build installdeps' and './Build install exes'. You can see thet build status by typing './Build status'. This will tell you what files are needed for maker to run.
 
-Using './Build', you can make the binaries for SNAP, augustus and exonerate with './Build snap', './Build augustus' and './Build exonerate'. The download locations for these binaries can be found in the ;downlaods' file in the src directory in /maker/. 
+Using './Build', you can make the binaries for SNAP, augustus and exonerate with './Build snap', './Build augustus' and './Build exonerate'. The download locations for these binaries can be found (or modified) in the 'downloads' file in the src directory in /maker/. 
 
 ==EMBOSS Instillation==
 
