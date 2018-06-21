@@ -37,11 +37,15 @@ To install emboss once downloaded, type the following commands:
 'make'
 'sudo make install'
 
-==FrameBot Instillation==
+Once installed, you can place the "matcher" binary into the maker/bin/ directory or add the path to matcher's location to the ctrlfile 
 
-Once 'Framebot-master.zip' has been downlaoded and unzipped, you may have to install 'ant' via the command 'sudo apt install ant'
+
+==FrameBot Instillation==
+you can downlaod RDPTools from GitHub. 
+Once downloaded and unzipped (or cloned from github), you may have to install 'ant' via the command 'sudo apt install ant'
 When you have ant installed, you can use 'ant jar' to install. Alternatively, you can download pre-compiled versions in our github directory and move them into the maker/bin/ directory
 
+Once installed, you can copy all "jar" files and the directory 'lib/' to /maker/bin/ or add the path to the ctrl file
    
 ----------------------
 Installation/File list
