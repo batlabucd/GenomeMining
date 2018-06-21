@@ -43,7 +43,9 @@ Once installed, you can place the "matcher" binary into the maker/bin/ directory
 ==FrameBot Instillation==
 you can downlaod RDPTools from GitHub. 
 Once downloaded and unzipped (or cloned from github), you may have to install 'ant' via the command 'sudo apt install ant'
-When you have ant installed, you can use 'ant jar' to install. Alternatively, you can download pre-compiled versions in our github directory and move them into the maker/bin/ directory
+When you have ant installed, you can use 'ant jar' to install. 
+
+Alternatively, you can download pre-compiled versions in our github directory (lib.zip and Framebotfiles.zip) and move them into the maker/bin/ directory
 
 Once installed, you can copy all "jar" files and the directory 'lib/' to /maker/bin/ or add the path to the ctrl file
    
