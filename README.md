@@ -8,7 +8,7 @@ The goal of AGILE is to mine and annotate genes from a target genome  using a se
 -------------
 Prerequisites
 -------------
-This code combines binaries from BLAST, MAKER, AUGUSTUS, SNAP, EMBOSS and Framebot
+AGILE combines binaries from BLAST, MAKER, AUGUSTUS, SNAP, EMBOSS and Framebot
   
 The following are locations for acquiring each binary (sites active as of writing this readme):
 
@@ -52,11 +52,11 @@ Once installed, you can copy all "jar" files and the directory 'lib/' to /maker/
 ----------------------
 Installation/File list
 ----------------------
-This script is written in Perl, and has been tested using version 5.10.1. The execution of this script does not require additional, non-standard perl libraries or BioPerl. 
+AGILE is written in Perl, and has been tested using version 5.10.1. The execution of agile does not require additional, non-standard perl libraries or BioPerl. 
 
-Installation of maker will result in a maker/bin/ directory. The pipeline script, and all associated files should be placed within this 'maker/bin/' directory. Additionally, all blast binaries and EMBOSS matcher can be placed within this directory, however their location can be specified in the ctrlfile..
+Installation of maker will result in a maker/bin/ directory. The AGILE script, and all associated files should be placed within this 'maker/bin/' directory. Additionally, all blast binaries and EMBOSS matcher can be placed within this directory, however their location can be specified in the ctrlfile..
 
-The path to maker outputs is currently hardcoded into the script as "XXX_datastore/9F/1D/Concatenated/theVoid.Concatenated/". This '9F/1D/' may vary depending on installation environment, and can be altered throughout the script (lines 670, 717, 718, 756).
+The path to maker outputs is currently hardcoded into the script as "XXX_datastore/9F/1D/Concatenated/theVoid.Concatenated/". This '9F/1D/' may vary depending on installation environment, and can be altered throughout the script (lines 670, 717, 718, 756), although this is only recommended if you have some experience with Perl, as any erroneous modifications may result in the script not working!.
 
 Files required for the execution of this script are:
 
@@ -86,7 +86,7 @@ File format/Preparation
 -----------------------
 Parameters and Examples
 -----------------------
-This script can be executed by calling Perl: "perl "name".pl". Alternatively, the script can be made executable by typing "chmod u+x "name".pl" and calling it as "./name.pl". 
+AGILE can be executed by calling Perl: "perl agile.pl". Alternatively, the script can be made executable by typing "chmod u+x "agile.pl" and calling it as "./agile.pl". 
 
 The ctrlfile contains a number of parameters and locations for executables. The current ctrlfile expects a file of reference gene names called "target_genes",which will be used to pull reference sequences from "Homo_sapiens_longest_transcript.fa" to mine "GCF_000001405.35_GRCh38.p9_genomic.fna" and output results to a directory called "HumanvHumanTest":
 
