@@ -1,4 +1,4 @@
-# GenomeMining
+# AGILE: Assembled Genome minIng pipeLinE 
 Methodologies for genome mining and annotation
 ---------
 Synopsis
