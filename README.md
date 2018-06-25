@@ -3,7 +3,7 @@ Methodologies for genome mining and annotation
 ---------
 Synopsis
 ---------
-The goal of this script is to mine and annotate genes from a target genome  using a set of reference genes from a closely related taxon. This script combines a number of bioinformatics tools, in addition to a number of extra steps to annotate genomic regions while overcoming limitations in genome annotation software. This script is wirtten in Perl for command line execution on a linux operating system.
+The goal of AGILE is to mine and annotate genes from a target genome  using a set of reference genes from a closely related taxon. This script combines a number of bioinformatics tools, in addition to a number of extra steps to annotate genomic regions while overcoming limitations in genome annotation software. AGILE is wirtten in Perl for command line execution on a linux operating system.
  
 -------------
 Prerequisites
