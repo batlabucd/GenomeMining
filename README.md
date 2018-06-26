@@ -70,7 +70,7 @@ The path to maker outputs is currently hardcoded into the script as "XXX_datasto
 
 Files required for the execution of this script are:
 
-"name".pl: The perl file containing the code
+agile.pl: The perl file containing the code
 
 ctrlfile:Control file containing modifieable parameters used by "name".pl
 
