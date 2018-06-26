@@ -79,6 +79,7 @@ maker_bopts.ctl, maker_opts.ctl: standard maker control files, modified for agil
 File format/Preparation
 -----------------------
 =>Gene list file: The gene list, named "target_genes" must contain a list of genes that the user wishes to identify and mine/annotate in the target genome. See "target_genes" in the example directory. The following is an example of the "target_genes" list:
+       
        TPP1
        
        ELOVL6
