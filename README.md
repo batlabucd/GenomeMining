@@ -130,4 +130,8 @@ Final gene sequences can be found in the "XXX_Final_Genes.fa" file. Each sequenc
 Note that identity and coverage will decrease using more divergent taxa, with varying number of exons and sequence diversity
 
 
+-------
+License
+-------
+See file 'LICENSE.md' for license. If you found our software useful in your analysis, we ask that you cite us as:
 
