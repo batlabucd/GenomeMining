@@ -80,9 +80,13 @@ File format/Preparation
 -----------------------
 =>Gene list file: The gene list, named "target_genes" must contain a list of genes that the user wishes to identify and mine/annotate in the target genome. See "target_genes" in the example directory. The following is an example of the "target_genes" list:
        TPP1
+       
        ELOVL6
+       
        TNMD
+       
        SCYL3
+       
        FGR
 
 =>The file containing reference sequences must be in fasta format, with ">" delimiting the gene information. This fasta header must contain the gene name in the format "(Gene name)", where 'Gene name' matches the gene name specified in the aforementioned gene list file: 
