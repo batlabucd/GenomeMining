@@ -66,8 +66,6 @@ AGILE is written in Perl, and has been tested using version 5.10.1. The executio
 
 Installation of maker will result in a maker/bin/ directory. The AGILE script, and all associated files should be placed within this 'maker/bin/' directory. Additionally, all blast binaries and EMBOSS matcher can be placed within this directory, however their location can be specified in the ctrlfile..
 
-The path to maker outputs is currently hardcoded into the script as "XXX_datastore/9F/1D/Concatenated/theVoid.Concatenated/". This '9F/1D/' may vary depending on installation environment, and can be altered throughout the script (lines 670, 717, 718, 756), although this is only recommended if you have some experience with Perl, as any erroneous modifications may result in the script not working!.
-
 Files required for the execution of this script are:
 
 agile.pl: The perl file containing the code
