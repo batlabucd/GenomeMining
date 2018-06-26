@@ -70,9 +70,9 @@ Files required for the execution of this script are:
 
 agile.pl: The perl file containing the code
 
-ctrlfile:Control file containing modifieable parameters used by "name".pl
+ctrlfile:Control file containing modifieable parameters used by agile.pl
 
-maker_bopts.ctl, maker_opts.ctl: standard maker control files, modified for "name".pl
+maker_bopts.ctl, maker_opts.ctl: standard maker control files, modified for agile.pl
 
 
 -----------------------
