@@ -9,9 +9,9 @@ The goal of AGILE is to mine and annotate genes from a target genome  using a se
 Pre-constructed pipeline
 ------------------------
 We have 2 pre-constructed versions of AGILE available, with all necessary dependancies, binaries and files installed already. One is a Virtual Box disk image (VDI), and the other is a Singularity image. 
-Both can be downlaoded here: https://figshare.com/s/a0004bf93dc43484b0c0
+Both can be downloaded here: https://figshare.com/s/a0004bf93dc43484b0c0
 
-Virtual Box can be downloaded here: https://www.virtualbox.org/
+Virtual Box (password: guest) can be downloaded here: https://www.virtualbox.org/
 
 Singularity can be downloaded here: https://singularity.lbl.gov/install-linux
 
