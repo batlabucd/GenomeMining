@@ -53,7 +53,7 @@ if(!-e $genome){
 else{
     print $genome." exists already, genome was not sheared\n";
 }
-
+#exit;
 ########################################## make blast formatted genome #########################################
 if(! -e $specname."\.nsq"){
     print "Formatting blast file\n";
@@ -718,7 +718,11 @@ foreach my $seq(@seqs){
         }
         $bfile=$qspec."_".$targene."\.maker\.output/".$qspec."\_".$targene."\_datastore/9F/1D/Concatenated/Concatenated.maker.transcripts.fasta";
        my $backupfile=$qspec."_".$targene."\.maker\.output/".$qspec."\_".$targene."\_datastore/9F/1D/Concatenated/originalout.txt";
-	
+	if(-e $bfile){#if maker cannot create an output file
+	}
+	else{
+	    $bfile=$qspec."_".$targene."\.maker\.output/".$qspec."\_".$targene."\_datastore/9F/1D/Concatenated/Concatenated.maker.augustus.transcripts.fasta";#take augustus file!
+	}
 	if(-e $bfile){
 	    open(U, "$bfile");
 	    $ncount=0;
@@ -745,6 +749,9 @@ foreach my $seq(@seqs){
 			    $best=$y;
 			    $aed=$caed;
 			}
+		    }
+		    elsif($y=~m/\-gene\-0\.0/){#if no AED in fasta header, probably an augustus prediction!Take first gene
+			$best=$y;
 		    }
 		}
 		print  OUT ">".$best;
@@ -837,6 +844,7 @@ foreach my $seq(@seqs){
         }
 	my $refthresh=$var{'coverage'};
         if($ref_coverage>$refthresh){
+           print $qspec."_".$targene." has been found, and meets the coverage threshold!\n\n";
 	   my $check=0;my $aa1=my$aa2=my $aa3=0;my $output_header;
 	   my $testseq=$cutseq;
 	   my $f2=substr($cutseq, 1, length($cutseq)-1);
@@ -875,6 +883,9 @@ foreach my $seq(@seqs){
 	   elsif($aa3<$aa1 && $aa3<$aa2){
 	       $finseq=$output_header.$f3."\n";
 	   }
+	   else{
+	       $finseq=$output_header.$testseq."\n";
+	   }
 	   my $fbpath=$var{'framebotpath'};
 	   `java -jar $fbpath/FrameBot.jar index seqa protindex`;
 	   open(NUC, ">nuc");
@@ -892,6 +903,7 @@ foreach my $seq(@seqs){
 	       $framefixed="";#modified this
 	   }
 	   else{
+	       print "Framebot appears to have had problems!\n\n";
 	       print FINAL $finseq;
 	       $finseq="";###modified this
 	   }
